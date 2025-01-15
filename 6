@@ -1,0 +1,23 @@
+#include<stdio.h>
+int gcd(int,int);
+int main() {
+    int a,b;
+    printf("Enter two numbers: \n");
+    scanf("%d %d",&a,&b);
+    printf("GCD is %d",gcd(a,b));
+    return 0;
+}
+int gcd(int x,int y) {
+    if(x==0) 
+        return y;
+    else if(y==0) 
+        return x;
+    else
+        return gcd(y,x % y);
+}
+
+
+OUTPUT:-
+Enter two numbers: 
+56 98
+GCD is 14
