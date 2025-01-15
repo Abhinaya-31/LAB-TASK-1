@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main() {
+    char str[100],*ptr;
+    int vow=0,con=0;
+    printf("\nTo count vowels and consonants in string using pointer\n\n");
+    printf("Enter a string: ");
+    fgets(str,sizeof(str),stdin);
+    ptr=str;
+    while(*ptr!='\0') {
+        if((*ptr>='A'&& *ptr<='z')||(*ptr>='a'&&*ptr<='z')) {
+            if(*ptr=='A'||*ptr=='E'||*ptr=='I'||*ptr=='O'||*ptr=='U'||*ptr=='a'||*ptr=='e'||*ptr=='i'||*ptr=='o'||*ptr=='u') {
+                vow++;
+            } else {
+                con++;
+            }
+        }
+        ptr++;
+    }
+    printf("Number of vowels:%d\n",vow);
+    printf("Number of consonants:%d\n",con);
+    printf("\n\n");
+    return 0;
+}
+
+
+OUTPUT:-
+To count vowels and consonants in string using pointer
+
+Enter a string: Hello World
+Number of vowels:3
+Number of consonants:7
