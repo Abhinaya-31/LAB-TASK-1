@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main() {
+    int dec,binary[32],index=0;
+    printf("To convert decimal number to binary\n\n");
+    printf("Enter a decimal number\n");
+    scanf("%d",&dec);
+    if(dec == 0) {
+        printf("Binary Representation: 0");
+    }
+    while(dec>0) {
+        binary[index]=dec%2;
+        dec/=2;
+        index++;
+    }
+    printf("Binary Representation: ");
+    for(int i=index-1;i>=0;i--) {
+        printf("%d",binary[i]);
+    }
+    printf("\n\n");
+    return 0;
+}
+
+
+output:-
+Enter a decimal number
+5
+Binary Representation: 101
